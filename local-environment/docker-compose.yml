@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  camunda:
+    image: camunda/camunda-bpm-platform
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  camundaworker:
+    build:
+      context: ../
+      dockerfile: local-environment/camunda-worker/Dockerfile
+    environment:
+      - CAMUNDA_BASE_REST_API=http://camunda:8080/engine-rest
+    restart: always
