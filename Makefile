@@ -2,24 +2,8 @@
 install:
 	pip install -r requirements/dev.txt
 
-.PHONY: check_and_test
-check-and-test:
-	mypy camunda worker tests
-	black --check camunda worker tests
-	flake8
-	tox
-	#coverage report
-
 formatcode:
-	black camunda worker tests
-
-.PHONY: lint
-lint-bpmn:
-	bpmnlint workflows/*/*.bpmn
-
-.PHONY: dockerbuild
-dockerbuild:
-	docker build . -f docker/Dockerfile -t camundaworker
+	black camunda worker
 
 .PHONY: local-env
 local-env:
