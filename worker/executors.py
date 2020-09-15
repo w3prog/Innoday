@@ -46,7 +46,7 @@ def generate_quality_report_executor(task):
     return {"results": {"value": "SUCCESS"}}
 
 
-def convert_timeseries_executor(task):
+def convert_data_executor(task):
     time.sleep(random.randint(5, 10))
     return {"results": {"value": "SUCCESS"}}
 

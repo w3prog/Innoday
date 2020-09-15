@@ -8,7 +8,7 @@ from worker.executors import (
     check_consistency_executor,
     check_timeliness_executor,
     generate_quality_report_executor,
-    convert_timeseries_executor,
+    convert_data_executor,
     generate_report_executor,
     store_data_executor
 )
@@ -21,7 +21,7 @@ executors = {
     "check_consistency": check_consistency_executor,
     "check_timeliness": check_timeliness_executor,
     "generate_quality_report": generate_quality_report_executor,
-    "convert_data": convert_timeseries_executor,
+    "convert_data": convert_data_executor,
     "generate_report": generate_report_executor,
     "store_data": store_data_executor,
 }
