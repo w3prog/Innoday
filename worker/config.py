@@ -1,21 +1,29 @@
 import os
 
 from worker.executors import (
-    fake_executor,
-    fake_executor_random
+    load_data_executor,
+    check_completeness_executor,
+    check_validity_executor,
+    check_uniqueness_executor,
+    check_consistency_executor,
+    check_timeliness_executor,
+    generate_quality_report_executor,
+    convert_timeseries_executor,
+    generate_report_executor,
+    store_data_executor
 )
 
 executors = {
-    "load_data": fake_executor_random,
-    "check_completness": fake_executor_random,
-    "check_validity": fake_executor_random,
-    "check_uniqueness": fake_executor_random,
-    "check_consistency": fake_executor_random,
-    "check_timeliness": fake_executor_random,
-    "generate_quality_report": fake_executor_random,
-    "convert_timeseries": fake_executor_random,
-    "generate_report": fake_executor_random,
-    "store_data": fake_executor_random,
+    "load_data": load_data_executor,
+    "check_completeness": check_completeness_executor,
+    "check_validity": check_validity_executor,
+    "check_uniqueness": check_uniqueness_executor,
+    "check_consistency": check_consistency_executor,
+    "check_timeliness": check_timeliness_executor,
+    "generate_quality_report": generate_quality_report_executor,
+    "convert_data": convert_timeseries_executor,
+    "generate_report": generate_report_executor,
+    "store_data": store_data_executor,
 }
 
 

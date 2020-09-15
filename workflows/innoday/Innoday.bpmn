@@ -21,19 +21,19 @@
     <bpmn:sequenceFlow id="Flow_0grxtzj" sourceRef="Activity_0bgbnm9" targetRef="Gateway_03l8e9o" />
     <bpmn:sequenceFlow id="Flow_0bh8uwa" sourceRef="Activity_1f29h70" targetRef="Gateway_03l8e9o" />
     <bpmn:sequenceFlow id="Flow_0g91cb1" sourceRef="Gateway_03l8e9o" targetRef="Event_14r7l84" />
-    <bpmn:serviceTask id="Activity_0djpyo9" name="Load data" camunda:type="external" camunda:topic="Load_data">
+    <bpmn:serviceTask id="Activity_0djpyo9" name="Load data" camunda:type="external" camunda:topic="load_data">
       <bpmn:incoming>Flow_0seyjn2</bpmn:incoming>
       <bpmn:outgoing>Flow_1qhq2j5</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_1lxts68" name="Check&#10;completness" camunda:type="external" camunda:topic="Check_completness">
+    <bpmn:serviceTask id="Activity_1lxts68" name="Check&#10;completness" camunda:type="external" camunda:topic="check_completness">
       <bpmn:incoming>Flow_1qhq2j5</bpmn:incoming>
       <bpmn:outgoing>Flow_0l1vpxe</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_0b4qmlc" name="Check validity" camunda:type="external" camunda:topic="Check_validity">
+    <bpmn:serviceTask id="Activity_0b4qmlc" name="Check validity" camunda:type="external" camunda:topic="check_validity">
       <bpmn:incoming>Flow_0l1vpxe</bpmn:incoming>
       <bpmn:outgoing>Flow_1d5ulyq</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:serviceTask id="Activity_0a8sza0" name="Check Uniqueness" camunda:type="external" camunda:topic="Check_uniqueness">
+    <bpmn:serviceTask id="Activity_0a8sza0" name="Check Uniqueness" camunda:type="external" camunda:topic="check_uniqueness">
       <bpmn:incoming>Flow_1d5ulyq</bpmn:incoming>
       <bpmn:outgoing>Flow_1eq3zx5</bpmn:outgoing>
     </bpmn:serviceTask>
