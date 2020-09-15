@@ -9,11 +9,12 @@ executors = {
     "load_data": fake_executor_random,
     "check_completness": fake_executor_random,
     "check_validity": fake_executor_random,
-    "check_Uniqueness": fake_executor_random,
+    "check_uniqueness": fake_executor_random,
+    "check_consistency": fake_executor_random,
     "check_timeliness": fake_executor_random,
-    "data_transform": fake_executor_random,
-    "generate_report": fake_executor_random,
     "generate_quality_report": fake_executor_random,
+    "convert_timeseries": fake_executor_random,
+    "generate_report": fake_executor_random,
     "store_data": fake_executor_random,
 }
 
